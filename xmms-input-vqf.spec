@@ -15,6 +15,8 @@ BuildRequires:	xmms-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	glib-devel
 BuildRequires:	gtk+-devel
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -23,7 +25,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This plugin allows xmms to play VQF files.
 
 %description -l pl
-Ta wtyczka pozawala xmms'owi odtwarzaæ muzykê w formacie VQF.
+Ta wtyczka pozwala xmms-owi odtwarzaæ muzykê w formacie VQF.
 
 %prep
 %setup -q -n vqfplugin-%{version}
