@@ -1,0 +1,92 @@
+Tylko w vqfplugin-0.9-patrys/src: fileinfo.o
+Tylko w vqfplugin-0.9-patrys/src: libvqf.so
+diff -u -r vqfplugin-0.9/src/vqf.cxx vqfplugin-0.9-patrys/src/vqf.cxx
+--- vqfplugin-0.9/src/vqf.cxx	2000-11-05 03:34:34.000000000 +0100
++++ vqfplugin-0.9-patrys/src/vqf.cxx	2004-04-13 09:22:01.405129984 +0200
+@@ -103,14 +103,14 @@
+ }                        
+ 
+ /* Inilialise plugin */
+-static void vqfInit(void) 
++void vqfInit(void) 
+ { 
+   /* strcpy(mel->stomach, offLicense->get("Beer")); */ 
+   TRACE("vqfInit: Initialising\n");
+ }
+ 
+ /* Display about box */
+-static void vqfAbout(void)
++void vqfAbout(void)
+ {
+   static GtkWidget *messageBox = NULL;
+   if (!messageBox)
+@@ -124,7 +124,7 @@
+ /* Check if this file belongs to us
+  * Easist is to check extension. 
+  * Alternatively, check if the first few bytes of a file is TWINVQ */
+-static int  vqfFile(char *filename)
++int  vqfFile(char *filename)
+ {
+   char *ext = strrchr(filename, '.');
+   if (ext && !strcasecmp(ext, ".vqf")) return TRUE;
+@@ -180,7 +180,7 @@
+ /* Once decoding starts, this function begins looping
+  * and going round and round and round and DOES IT EVER END? 
+  * Send beer to Mel, save him from insanity! */
+-static void *vqfPlayLoop(void *arg) 
++void *vqfPlayLoop(void *arg) 
+ {
+   TRACE("vqfPlayLoop: Entering\n");
+   bool lastFrame = false;
+@@ -275,7 +275,7 @@
+ }
+ 
+ /* Play a song */
+-static void vqfPlay(char *filename) 
++void vqfPlay(char *filename) 
+ { 
+   /* Happy days. A file is to be played 
+    * Send Mel a Six pack in gratidute! */
+@@ -330,7 +330,7 @@
+ }
+ 
+ /* Stop output */
+-static void vqfStop(void) 
++void vqfStop(void) 
+ { 
+   TRACE("vqfStop: Stop called\n");
+   
+@@ -346,28 +346,28 @@
+ }
+ 
+ /* Pause output */
+-static void vqfPause(short p) 
++void vqfPause(short p) 
+ { 
+   TRACE("vqfPause: Pause called\n");
+   vqfIP.output->pause(p); 
+ }
+ 
+ /* Seek in VQF */
+-static void vqfSeek(int time) 
++void vqfSeek(int time) 
+ { 
+   vqfCurrent.seekTime = time; 
+   while (vqfCurrent.seekTime != -1) xmms_usleep(10000);
+ } 
+ 
+ /* Get how much has been played so far */
+-static int  vqfGetTime(void) 
++int  vqfGetTime(void) 
+ { 
+   TRACE("vqfGetTime: Returning time\n");
+   if (vqfCurrent.playing == true) return vqfIP.output->output_time();
+   else return -1;
+ }
+ 
+-static void vqfGetInfo(char *filename, char **title, int *length) 
++void vqfGetInfo(char *filename, char **title, int *length) 
+ {
+   VQFFile fileInfo;
+   TRACE("vqfGetInfo: Calling getSongInfo()\n");
+Tylko w vqfplugin-0.9-patrys/src: vqf.o

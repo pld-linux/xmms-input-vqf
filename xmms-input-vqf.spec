@@ -9,6 +9,7 @@ Source0:	http://www.csn.ul.ie/~mel/projects/linux/vqfplugin/vqfplugin-%{version}
 # Source0-md5:	7153736f375ff34819c8b2bc7b503972
 Patch0:		vqfplugin-gtkconfig.patch
 Patch1:		vqfplugin-DESTDIR.patch
+Patch2:		vqfplugin-compile.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	glib-devel
@@ -30,6 +31,7 @@ Ta wtyczka pozwala xmms-owi odtwarzaæ muzykê w formacie VQF.
 %setup -q -n vqfplugin-%{version}
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 %{__aclocal}
