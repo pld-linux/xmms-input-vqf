@@ -1,15 +1,15 @@
 Summary:	VQF plugin for xmms
 Summary(pl):	Wtyczka odtwarzaj±ca pliki VQF dla xmms
 Name:		xmms-input-vqf
-Version:	0.9
-Release:	7
+Version:	0.94
+Release:	0.1
 License:	GPL
 Group:		X11/Applications/Sound
 Source0:	http://www.csn.ul.ie/~mel/projects/linux/vqfplugin/vqfplugin-%{version}.tar.gz
-# Source0-md5:	2158b11c9eccff4fac43a828b221e20f
-Patch0:		vqfplugin-gtkconfig.patch
+# Source0-md5:	ce4f77b94303db473cc15aabf91649b5
+#Patch0:	vqfplugin-gtkconfig.patch
 Patch1:		vqfplugin-DESTDIR.patch
-Patch2:		vqfplugin-compile.patch
+URL:            http://www.csn.ul.ie/~mel/projects/linux/vqfplugin/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	glib-devel
@@ -28,13 +28,15 @@ Ta wtyczka pozwala xmms-owi odtwarzaæ muzykê w formacie VQF.
 
 %prep
 %setup -q -n vqfplugin-%{version}
-%patch0 -p1
+#%%patch0 -p1
 %patch1 -p1
-%patch2 -p1
 
 %build
+echo "#" > vqfinfo/Makefile.am
 %{__aclocal}
 %{__autoconf}
+%{__autoheader}
+%{__automake}
 %configure
 
 %{__make}
