@@ -4,8 +4,6 @@ Name:		xmms-input-vqf
 Version:	0.9
 Release:	2
 Group:		X11/Applications/Multimedia
-Group(de):	X11/Applikationen/Multimedia
-Group(pl):	X11/Aplikacje/Multimedia
 License:	GPL
 Source0:	http://www.csn.ul.ie/~mel/projects/linux/vqfplugin/vqfplugin-%{version}.tar.gz
 Patch0:		vqfplugin-gtkconfig.patch
