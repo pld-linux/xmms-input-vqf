@@ -32,7 +32,7 @@ Ta wtyczka pozwala xmms-owi odtwarzaæ muzykê w formacie VQF.
 %patch1 -p1
 
 %build
-aclocal
+%{__aclocal}
 %{__autoconf}
 %configure
 
