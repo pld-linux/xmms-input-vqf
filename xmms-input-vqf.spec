@@ -4,17 +4,17 @@ Name:		xmms-input-vqf
 Version:	0.9
 Release:	4
 License:	GPL
-Group:		X11/Applications/Multimedia
+Group:		X11/Applications/Sound
 Source0:	http://www.csn.ul.ie/~mel/projects/linux/vqfplugin/vqfplugin-%{version}.tar.gz
 Patch0:		vqfplugin-gtkconfig.patch
 Patch1:		vqfplugin-DESTDIR.patch
-Requires:	xmms
-BuildRequires:	xmms-devel
-BuildRequires:	libstdc++-devel
-BuildRequires:	glib-devel
-BuildRequires:	gtk+-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	glib-devel
+BuildRequires:	gtk+-devel
+BuildRequires:	libstdc++-devel
+BuildRequires:	xmms-devel
+Requires:	xmms
 ExclusiveArch:	%{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
