@@ -15,6 +15,7 @@ BuildRequires:	glib-devel
 BuildRequires:	gtk+-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
+ExclusiveArch:	%{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
