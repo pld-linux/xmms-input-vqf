@@ -9,7 +9,7 @@ Source0:	http://www.csn.ul.ie/~mel/projects/linux/vqfplugin/vqfplugin-%{version}
 # Source0-md5:	ce4f77b94303db473cc15aabf91649b5
 #Patch0:	vqfplugin-gtkconfig.patch
 Patch1:		vqfplugin-DESTDIR.patch
-URL:            http://www.csn.ul.ie/~mel/projects/linux/vqfplugin/
+URL:		http://www.csn.ul.ie/~mel/projects/linux/vqfplugin/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	glib-devel
