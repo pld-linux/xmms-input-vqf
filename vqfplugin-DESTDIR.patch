@@ -1,0 +1,10 @@
+diff -Nur vqfplugin-0.9/src/Makefile.in vqfplugin-0.9.new/src/Makefile.in
+--- vqfplugin-0.9/src/Makefile.in	Sat Nov  4 23:53:33 2000
++++ vqfplugin-0.9.new/src/Makefile.in	Tue Nov  7 09:20:39 2000
+@@ -34,4 +34,5 @@
+ 	$(CC) $(DEFINES) $(CFLAGS) $(DEBUGFLAGS) -DDEBUG -c fileinfo.cxx
+ 
+ install: libvqf.so
+-	cp libvqf.so @prefix@/lib/xmms/Input/
++	install -d $(DESTDIR)@prefix@/lib/xmms/Input
++	install libvqf.so $(DESTDIR)@prefix@/lib/xmms/Input/
