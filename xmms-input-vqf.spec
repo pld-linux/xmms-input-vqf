@@ -6,6 +6,7 @@ Release:	5
 License:	GPL
 Group:		X11/Applications/Sound
 Source0:	http://www.csn.ul.ie/~mel/projects/linux/vqfplugin/vqfplugin-%{version}.tar.gz
+# Source0-md5:	7153736f375ff34819c8b2bc7b503972
 Patch0:		vqfplugin-gtkconfig.patch
 Patch1:		vqfplugin-DESTDIR.patch
 BuildRequires:	autoconf
