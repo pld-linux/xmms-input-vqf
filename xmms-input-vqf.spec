@@ -37,7 +37,8 @@ echo "#" > vqfinfo/Makefile.am
 %{__automake}
 %configure
 
-%{__make}
+%{__make} \
+	CC="%{__cc}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
