@@ -33,16 +33,16 @@ Ta wtyczka pozwala xmms-owi odtwarzaæ muzykê w formacie VQF.
 %build
 aclocal
 autoconf
-%configure 
+%configure
 
-%{__make} 
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR="$RPM_BUILD_ROOT"
 
-gzip -9nf AUTHORS ChangeLog 
+gzip -9nf AUTHORS ChangeLog
 
 %clean
 rm -rf $RPM_BUILD_ROOT
