@@ -1,5 +1,5 @@
 Summary:	VQF plugin for XMMS
-Summary(pl):	Wtyczka wej¶ciowa dla XMMS-a odtwarzaj±ca pliki VQF
+Summary(pl.UTF-8):   Wtyczka wejÅ›ciowa dla XMMS-a odtwarzajÄ…ca pliki VQF
 Name:		xmms-input-vqf
 Version:	0.94
 Release:	1
@@ -22,8 +22,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 This plugin allows xmms to play VQF files.
 
-%description -l pl
-Ta wtyczka pozwala XMMS-owi odtwarzaæ muzykê w formacie VQF.
+%description -l pl.UTF-8
+Ta wtyczka pozwala XMMS-owi odtwarzaÄ‡ muzykÄ™ w formacie VQF.
 
 %prep
 %setup -q -n vqfplugin-%{version}
